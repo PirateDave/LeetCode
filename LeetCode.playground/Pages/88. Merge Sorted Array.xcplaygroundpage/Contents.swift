@@ -17,8 +17,8 @@ func merge(_ nums1: inout [Int], _ m: Int, _ nums2: [Int], _ n: Int) {
     var indexTwo = 0
     
     while index < totalSize {
-        var nums1Iter = indexOne >= maxOne
-        var nums2Iter = indexTwo >= maxTwo
+        let nums1Iter = indexOne >= maxOne
+        let nums2Iter = indexTwo >= maxTwo
         if !nums1Iter && (nums2Iter || nums1[indexOne] < nums2[indexTwo]) {
             output[index] = nums1[indexOne]
             indexOne += 1
